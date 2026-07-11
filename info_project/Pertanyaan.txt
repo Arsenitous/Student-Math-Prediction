@@ -1,0 +1,81 @@
+╔══════════════════════════════════════════════════════════╗
+║  PROJECT 7 — Student Math Score Prediction App 🎓       ║
+║  (Regression · Education)                               ║
+╚══════════════════════════════════════════════════════════╝
+
+── SECTION 1: Background & Problem ──────────────────────
+Q1. Apa masalah nyata yang ingin diselesaikan proyek ini?
+
+    JAWABAN:
+    ________________________________________________________
+    ________________________________________________________
+    ________________________________________________________
+
+Q2. Kenapa masalah ini penting untuk diselesaikan?
+
+    JAWABAN:
+    ________________________________________________________
+    ________________________________________________________
+
+── SECTION 2: Dataset & EDA ─────────────────────────────
+Q3. Dari mana kamu dapat dataset-nya?
+
+    JAWABAN:
+    ________________________________________________________
+
+Q4. Berapa jumlah baris & kolom/fitur dataset-nya?
+
+    JAWABAN:  Baris: ____________  Kolom: ____________
+
+Q5. Fitur apa saja yang ada di dataset?
+    (Gender, parental education, test prep, dll.)
+
+    JAWABAN:
+    ________________________________________________________
+    ________________________________________________________
+
+Q6. Temuan menarik apa yang kamu temukan saat EDA?
+    (Faktor apa yang paling berpengaruh terhadap nilai math?)
+
+    JAWABAN:
+    ________________________________________________________
+    ________________________________________________________
+    ________________________________________________________
+
+── SECTION 3: Methodology & Modeling ───────────────────
+Q7. Algoritma apa saja yang kamu bandingkan?
+
+    JAWABAN:
+    ________________________________________________________
+    ________________________________________________________
+
+Q8. Algoritma mana yang terbaik dan kenapa?
+
+    JAWABAN:
+    ________________________________________________________
+    ________________________________________________________
+
+Q9. Berapa hasil metric evaluasi model terbaik-mu?
+    (R², MAE, RMSE)
+
+    JAWABAN:  R²: ______  MAE: ______  RMSE: ______
+
+Q10. Apakah ada feature engineering atau preprocessing khusus?
+     (Label encoding, scaling, one-hot encoding, dll.)
+
+     JAWABAN:
+     ________________________________________________________
+     ________________________________________________________
+
+── SECTION 4: Impact & Insights ────────────────────────
+Q11. Apa yang bisa dilakukan user di aplikasi Streamlit-mu?
+
+     JAWABAN:
+     ________________________________________________________
+     ________________________________________________________
+
+Q12. Apa insight atau kesimpulan paling penting dari proyek ini?
+
+     JAWABAN:
+     ________________________________________________________
+     ________________________________________________________

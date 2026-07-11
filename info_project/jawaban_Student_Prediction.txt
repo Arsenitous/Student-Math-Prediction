@@ -1,0 +1,104 @@
+╔══════════════════════════════════════════════════════════╗
+║  PROJECT 7 — Student Math Score Prediction App 🎓       ║
+║  (Regression · Education)                               ║
+╚══════════════════════════════════════════════════════════╝
+
+── SECTION 1: Background & Problem ──────────────────────
+Q1. Apa masalah nyata yang ingin diselesaikan proyek ini?
+
+    JAWABAN:
+    Proyek ini bertujuan untuk memprediksi nilai ujian matematika (math score) 
+    seorang siswa berdasarkan berbagai latar belakang demografis dan historis akademis 
+    yang mereka miliki (seperti jenis kelamin, pendidikan orang tua, fasilitas, dll).
+
+Q2. Kenapa masalah ini penting untuk diselesaikan?
+
+    JAWABAN:
+    Untuk membantu pendidik dan institusi pendidikan memahami faktor-faktor eksternal 
+    yang paling mempengaruhi kinerja akademis siswa. Dengan kemampuan prediksi ini, 
+    institusi dapat memberikan intervensi dini atau dukungan khusus bagi siswa yang 
+    diperkirakan akan kesulitan dalam ujian matematika.
+
+── SECTION 2: Dataset & EDA ─────────────────────────────
+Q3. Dari mana kamu dapat dataset-nya?
+
+    JAWABAN:
+    Dataset yang digunakan adalah "Students Performance in Exams" yang bersumber 
+    dari Kaggle.
+
+Q4. Berapa jumlah baris & kolom/fitur dataset-nya?
+
+    JAWABAN:  Baris: 1.000  Kolom: 8 (7 fitur input + 1 target)
+
+Q5. Fitur apa saja yang ada di dataset?
+    (Gender, parental education, test prep, dll.)
+
+    JAWABAN:
+    Fitur input terdiri dari 5 fitur kategorikal dan 2 fitur numerik, yaitu:
+    - `gender` (jenis kelamin)
+    - `race_ethnicity` (grup ras/etnis)
+    - `parental_level_of_education` (tingkat pendidikan orang tua)
+    - `lunch` (jenis makan siang, standard atau free/reduced)
+    - `test_preparation_course` (status mengikuti kursus persiapan ujian)
+    - `reading_score` (nilai ujian membaca)
+    - `writing_score` (nilai ujian menulis)
+
+Q6. Temuan menarik apa yang kamu temukan saat EDA?
+    (Faktor apa yang paling berpengaruh terhadap nilai math?)
+
+    JAWABAN:
+    Faktor yang memiliki korelasi positif paling kuat terhadap nilai matematika adalah 
+    kemampuan literasi siswa (tercermin dari `reading_score` dan `writing_score`). 
+    Selain itu, faktor latar belakang ekonomi (siswa dengan 'standard lunch') serta 
+    siswa yang menyelesaikan 'test preparation course' secara rata-rata memiliki 
+    nilai matematika yang lebih unggul dibandingkan kelompok lainnya.
+
+── SECTION 3: Methodology & Modeling ───────────────────
+Q7. Algoritma apa saja yang kamu bandingkan?
+
+    JAWABAN:
+    Berbagai algoritma Machine Learning regresi dibandingkan, di antaranya: 
+    Linear Regression, Random Forest, Gradient Boosting, AdaBoost Regressor, 
+    Decision Tree, K-Neighbors Regressor, XGBoost Regressor, dan CatBoost Regressor.
+
+Q8. Algoritma mana yang terbaik dan kenapa?
+
+    JAWABAN:
+    AdaBoost Regressor adalah model yang terbaik untuk proyek ini karena setelah 
+    dilakukan proses eksperimen dan hyperparameter tuning, algoritma ensemble boosting 
+    ini menghasilkan error terendah serta skor evaluasi keseluruhan yang paling optimal 
+    dibandingkan model lainnya.
+
+Q9. Berapa hasil metric evaluasi model terbaik-mu?
+    (R², MAE, RMSE)
+
+    JAWABAN:  R²: 0.8804  MAE: 4.2148  RMSE: 5.3940
+
+Q10. Apakah ada feature engineering atau preprocessing khusus?
+     (Label encoding, scaling, one-hot encoding, dll.)
+
+     JAWABAN:
+     Ya, terdapat pipeline preprocessing khusus: 
+     - Fitur kategorikal (gender, race, dll) diubah menggunakan One-Hot Encoding (`OneHotEncoder`).
+     - Fitur numerik (reading_score, writing_score) distandarisasi menggunakan Scaling (`StandardScaler`).
+
+── SECTION 4: Impact & Insights ────────────────────────
+Q11. Apa yang bisa dilakukan user di aplikasi Streamlit-mu?
+
+     JAWABAN:
+     Aplikasi web interaktif menyediakan form di mana user bisa mengisi profil siswa 
+     (memilih gender, tingkat pendidikan orang tua, tipe makan siang, dan persiapan ujian) 
+     serta meng-input skor reading dan writing siswa tersebut. Ketika tombol prediksi 
+     ditekan, aplikasi akan secara instan memunculkan estimasi nilai matematika siswa, 
+     lengkap dengan visualisasi progress bar dan lencana performa/grade (seperti Excellent, 
+     Good, Average, atau Needs Improvement).
+
+Q12. Apa insight atau kesimpulan paling penting dari proyek ini?
+
+     JAWABAN:
+     Kinerja seorang siswa dalam satu mata pelajaran berbanding lurus dengan kemampuannya 
+     di pelajaran lain (membaca & menulis), yang dipadukan kuat dengan faktor pendukung 
+     seperti kualitas gizi (lunch) dan dedikasi persiapan belajar (test preparation). 
+     Pendekatan Machine Learning Pipeline yang terstruktur terbukti sangat mumpuni dalam 
+     memetakan korelasi ini menjadi sebuah produk prediksi (web app) siap pakai yang 
+     bermanfaat di ranah edukasi.
