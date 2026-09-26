@@ -7,7 +7,7 @@
 
 ### 🚀 Try the Live Demo!
 
-> 🔗 **[https://ml-project-efj6w5gi4ybs7tmfbyh5kx.streamlit.app/](https://ml-project-efj6w5gi4ybs7tmfbyh5kx.streamlit.app/)**
+> 🔗 **[https://ml-project-efj6w5gi4ybs7tmfbyh5kx.streamlit.app/](https://student-math-prediction-hhxbyr8y8ayrlpneerzzgg.streamlit.app/)**
 
 ---
 
